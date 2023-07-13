@@ -1,14 +1,12 @@
 #! /bin/bash 
 
+ls -l $SERVER
+ls -l /home/tf2/hlserver/tf2
 cd $SERVER/tf2/tf/maps
 
-MAPS_KEEP=("cp_badlands.bsp")
-MAPS_ALL=( $(find -type f -name "*.bsp" -printf "%f\n") )
-
-# MAPS_DELETE=($(diff MAPS_ALL[@] MAPS_KEEP[@]))
-MAPS_DELETE=$(echo ${MAPS_ALL[@]} ${MAPS_KEEP[@]} | tr ' ' '\n' | sort | uniq -u)
-
-rm ${MAPS_DELETE[@]}
+mv cp_badlands.{bsp,keep}
+rm *.bsp
+mv cp_badlands.{keep,bsp}
 
 cd $SERVER/tf2/tf
 

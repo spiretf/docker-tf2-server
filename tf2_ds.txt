@@ -1,4 +1,4 @@
 login anonymous
-force_install_dir ./tf2
+force_install_dir /home/tf2/hlserver/tf2/
 app_update 232250
 quit
