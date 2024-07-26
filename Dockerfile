@@ -27,6 +27,7 @@ ENV SERVER $HOME/hlserver
 
 ADD --chown=tf2:tf2 tf2_ds.txt update.sh clean.sh tf.sh $SERVER/
 RUN mkdir -p $SERVER/tf2 \
+	&& ln -s /usr/games/steamcmd $SERVER/steamcmd.sh \
 	&& $SERVER/update.sh \
 	&& $SERVER/clean.sh
 
