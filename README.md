@@ -1,3 +1,5 @@
+# Moved to https://codeberg.org/spire/docker-tf2-server
+
 ## Team Fortress 2 + Docker
 
 Basic Team Fortress 2 server
